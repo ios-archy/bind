@@ -5,6 +5,10 @@
     "pages/book-detail/index",
     "pages/my/index"
   ],
+  "requiredBackgroundModes": [
+    "audio",
+    "backgroundAudioManager"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
