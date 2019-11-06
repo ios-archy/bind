@@ -1,9 +1,9 @@
 // pages/classic/index.js
 
-import { ClassicModel} from '../../models/classic.js'
+import { ClassicModel } from '../../models/classic.js'
 let classicModel = new ClassicModel()
 
-import {LikeModel} from '../../models/like.js'
+import { LikeModel } from '../../models/like.js'
 let likeModel = new LikeModel()
 
 
@@ -17,7 +17,8 @@ Page({
     classic:null,
     // 默认获取的是最新一期，所以设置latest为true，first为false
     first:false,
-    latest:true
+    latest:true,
+    order_id:244
   },
 
   /**

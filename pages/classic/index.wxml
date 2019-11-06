@@ -22,4 +22,7 @@
 
    <v-navi bind:left="onNext" bind:right ="onPrevious" class="navi" title="{{classic.title}}" first="{{first}}" latest="{{latest}}">
    </v-navi>
+
+  <button open-type='contact' class='contactservice' >正常客服</button>
+  <button open-type='contact' class='contactservice' session-from="getQrcode_{{order_id}}" >领取入营二维码</button>
 </view>

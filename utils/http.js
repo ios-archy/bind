@@ -7,38 +7,46 @@ const tips = {
 }
 
 class HTTP {
+   
+   constructor(){
+     this.baseRestUrl = config.api_blink_url
+   }
+
   request(params)
   {
+   var that = this
+   var url = this.baseRestUrl + params.url
+
     if(!params.method)
     {
       params.method ='GET'
     }
     wx.request({
-      url: 'http://bl.7yue.pro/v1/'+params.url,
+      url: url,
       method : params.method,
       data :params.data,
       header : {
         'content-type': 'application/json',
-        'appkey': "RdshydjBvcYZhMZC"
+        'appkey': config.appkey
       },
       //成功后回调函数
       success:(res)=>{
-        
+        //判断以2开头的状态码为正确
+        //异常不要返回到回调中，就在request中处理，记录日志并showtoast一个统一的错误
         let code = res.statusCode.toString()
-
-        if(code.startsWith('2'))
+        var startChar = code.charAt(0)
+        if (startChar == '2')
         {
           // 如果params.success存在则才去执行params.success(res.data)
            params.success && params.success(res.data)
         }else
         {
-          let  error_code = res.data.error_code
-          this._show_error(error_code)
+          params.error && params.error(res)
         }
       },
-      fail:(res)=>
+      fail:function(err)
       {
-        this._show_error(1)
+        params.fail && params.fail(err)
       }
     })
   }

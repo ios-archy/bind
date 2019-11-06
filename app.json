@@ -12,7 +12,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "旧岛小样",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -21,23 +21,24 @@
     "color": "#c7c7c7",
     "list": [
       {
-      "pagePath": "pages/classic/index",
-      "text": "流行",
-      "iconPath": "images/tab/classic.png",
-      "selectedIconPath": "images/tab/classic@highlight.png"
-    },
-    {
-      "pagePath": "pages/book/index",
-      "text": "书籍",
-      "iconPath": "images/tab/book.png",
-      "selectedIconPath": "images/tab/book@highlight.png"
-    },
-    {
-      "pagePath": "pages/my/index",
-      "text": "我的",
-      "iconPath": "images/tab/my.png",
-      "selectedIconPath": "images/tab/my@highlight.png"
-    }
+        "pagePath": "pages/classic/index",
+        "text": "流行",
+        "iconPath": "images/tab/classic.png",
+        "selectedIconPath": "images/tab/classic@highlight.png"
+      },
+      {
+        "pagePath": "pages/book/index",
+        "text": "书籍",
+        "iconPath": "images/tab/book.png",
+        "selectedIconPath": "images/tab/book@highlight.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/tab/my.png",
+        "selectedIconPath": "images/tab/my@highlight.png"
+      }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
